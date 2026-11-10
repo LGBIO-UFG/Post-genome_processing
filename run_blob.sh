@@ -19,8 +19,8 @@ set -euo pipefail
 # ============================================================
 
 NCBIDB="/media/hd16-databases/blast_dbs/core_nt/core_nt"
-THREADS_MAP=30
-THREADS_BLAST=24
+THREADS_MAP=20
+THREADS_BLAST=20
 
 # ============================================================
 # VERIFICAR ARGUMENTOS
