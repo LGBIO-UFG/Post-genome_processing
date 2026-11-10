@@ -11,11 +11,14 @@ This repository contains scripts for post-assembly genome processing.
  
  * Additional script for automated quality metric evaluation.
 
+## 0. Download scripts
+```bash
+
+
+```
 ## 1. Purge
 
 ``` bash
-
-wget https://raw.githubusercontent.com/LGBIO-UFG/Post-genome_processing/refs/heads/main/run_purge_dups.sh
 
 bash run_purge_dups_telo.sh \
     3.hifiasm_q20l10000_telo/Cbr-08-07-2026_q20l10000_l3_telo.hic.hap1.p_ctg.fa \
