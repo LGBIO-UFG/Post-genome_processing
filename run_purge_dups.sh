@@ -254,6 +254,7 @@ if [ "$HIST_AVAILABLE" = true ]; then
     echo
     echo "Gerando histograma de cobertura..."
 
+    python -m pip install matplotlib
     python "${PURGE_SCRIPTS}/hist_plot.py" \
         -c cutoffs \
         PB.stat \
@@ -321,6 +322,7 @@ echo "============================================================"
 echo "5.5 - PURGE DUPLICATIONS"
 echo "============================================================"
 echo
+
 
 "${PURGE}/purge_dups" \
     -2 \
