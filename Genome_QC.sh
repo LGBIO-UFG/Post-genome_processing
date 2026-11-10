@@ -19,7 +19,7 @@ set -euo pipefail
 
 BUSCO_lineage="/media/lgbio-nas1/lcorvalan/Pgu_genome/busco_downloads/lineages/eudicotyledons_odb12"
 MERYL="/media/lgbio-nas1/lcorvalan/Pgu_genome/4.qc_genoma/Pgu_mgi_q15l5000.meryl"
-THREADS=30
+THREADS=20
 
 # ============================================================
 # VERIFICAR ARGUMENTOS
