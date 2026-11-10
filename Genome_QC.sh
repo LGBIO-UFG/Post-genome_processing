@@ -72,7 +72,7 @@ done
 
 echo "1. Rodando QUAST"
 
-quast.py -t "$THREADS" -o Quast \
+quast.py -t "$THREADS" -o Quast -s \
     --labels Primary \
     "$FASTA_hap1"
 
@@ -88,7 +88,7 @@ conda activate busco
 set -u
 
 
-export _JAVA_OPTIONS="-Xmx300G"
+export _JAVA_OPTIONS="-Xmx50G"
 
 busco -i "$FASTA_hap1" \
     -l "$BUSCO_lineage" \
@@ -131,6 +131,9 @@ teloscope "$FASTA_hap1" \
     -o Teloscope_hap1 \
     -w 25000 -s 25000 \
     -r --plot-report
+
+
+# telomero Thamnophilidae -c TTAGGG -p TTAGGG,TCAGGG,TGAGGG,TTGGGG
 
 
 conda deactivate
