@@ -1,8 +1,10 @@
 # Post-Genome Processing
 
-**Author:** Leonardo C. J. Corvalan \n
-**Contact:** lcjcorvalan@gmail.com \n
-**Last updated:** 2026-11-10 \n
+**Author:** Leonardo C. J. Corvalan
+
+**Contact:** lcjcorvalan@gmail.com 
+
+**Last updated:** 2026-11-10
 
 This repository contains a set of scripts for processing a genome assembly after it has been generated (post-assembly). The workflow takes a draft assembly (for example, produced with hifiasm from HiFi reads and Hi-C data) and turns it into a cleaner, decontaminated, nuclear-only assembly that is ready for quality assessment and downstream analyses.
 
