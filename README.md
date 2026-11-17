@@ -6,7 +6,7 @@
 
 **Last updated:** 2026-11-10
 
-This repository contains a set of scripts for processing a genome assembly after it has been generated (post-assembly). The workflow takes a draft assembly (for example, produced with hifiasm from HiFi reads and Hi-C data) and turns it into a cleaner, decontaminated, nuclear-only assembly that is ready for quality assessment and downstream analyses.
+This repository contains a set of scripts for processing a genome assembly after it has been generated (post-assembly). The workflow takes a draft assembly (for example, produced with hifiasm from nanopore reads and Hi-C data) and turns it into a cleaner, decontaminated, nuclear-only assembly that is ready for quality assessment and downstream analyses.
 
 ## Table of Contents
 
@@ -61,7 +61,7 @@ Before running the pipeline, make sure you have:
 - **QUAST**, **BUSCO** (with the lineage dataset downloaded in advance), **Merqury** with a pre-built **meryl** k-mer library, and **Teloscope**
 - **Input data**:
   - Draft assembly in FASTA format (e.g., `*.hic.hap1.p_ctg.fa`)
-  - Filtered HiFi reads in FASTQ format (`*.fastq.gz`)
+  - Filtered Nanopore reads in FASTQ format (`*.fastq.gz`)
   - Organelle reference sequences (chloroplast and mitochondrial) in FASTA format
 
 > **Important:** The meryl library and the BUSCO database must be created or downloaded **before** running Step 4.
@@ -85,11 +85,11 @@ chmod +x *.sh
 
 ## Step 1 - Purge duplicates
 
-This step removes duplicated haplotigs (contigs that represent the same genomic region assembled twice) and handles telomeric regions, using `purge_dups` guided by the HiFi reads.
+This step removes duplicated haplotigs (contigs that represent the same genomic region assembled twice) and handles telomeric regions, using `purge_dups` guided by the nanopore reads.
 
 **Input**
 - `*.hic.hap1.p_ctg.fa`: draft haplotype 1 assembly (output of hifiasm)
-- `*_q20_l10000.fastq.gz`: filtered HiFi reads (Q20, minimum length 10 kb)
+- `*_q20_l10000.fastq.gz`: filtered nanopore reads (Q20, minimum length 10 kb)
 
 **Command**
 
